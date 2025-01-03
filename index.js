@@ -54,6 +54,7 @@ function watchColorPicker(event) {
 
 function setColors() {
     for (let i=0; i<valueArr.length; i++) {
+        //set the color blocks and text
         block1.style.backgroundColor = valueArr[0]
         block2.style.backgroundColor = valueArr[1]
         block3.style.backgroundColor = valueArr[2]
