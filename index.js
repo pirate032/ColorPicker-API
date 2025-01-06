@@ -1,20 +1,21 @@
 const seedColor = document.getElementById('seed-color')
 const colorScheme = document.getElementById('color-scheme')
 const getColor = document.getElementById("get-color")
-let newScheme = colorScheme.value
 
 const block1 = document.getElementById("block1")
 const block2 = document.getElementById("block2")
 const block3 = document.getElementById("block3")
 const block4 = document.getElementById("block4")
 const block5 = document.getElementById("block5")
+
 const color1 = document.getElementById("color1")
 const color2 = document.getElementById("color2")
 const color3 = document.getElementById("color3")
 const color4 = document.getElementById("color4")
 const color5 = document.getElementById("color5")
 
-let newColor
+let newColor = seedColor.value
+let newScheme = colorScheme.value
 let valueArr = []
 
 seedColor.addEventListener("change", watchColorPicker)
@@ -32,10 +33,8 @@ getColor.addEventListener("click", function() {
             //colors are stored in array of objects providing multiple conventions
             let colorArr = data.colors
             colorArr.forEach(function(color){
-                //console.log(color.hex)
                 //look only at the hex values and set those to a new array
                 valueArr.push(color.hex.value)
-                //console.log(valueArr)
                 //call function to set background color of blocks and text fields
                 setColors()
             })
